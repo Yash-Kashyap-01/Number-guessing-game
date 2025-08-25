@@ -17,7 +17,7 @@ After each guess, the program provides hints whether the guessed number is **hig
 
 ## 🛠️ How to Run
 1. Clone this repository:
-   git clone https://github.com/yash-kashyap-01/number-guessing-game-c.git
+   git clone https://github.com/Yash-kashyap-01/number-guessing-game-c.git
 2. Navigate into the folder:
    cd number-guessing-game-c
 3. Compile the program:
