@@ -1,17 +1,27 @@
-# 🎮 Number Guessing Game (C Language)
+🎮 Number Guessing Game (C Language)
 
-This is a simple **Number Guessing Game** written in C.  
-The program generates a random number between **1 and 100**, and the player must guess the correct number.  
-After each guess, the program provides hints whether the guessed number is **higher** or **lower** than the mystery number.
+This is an advanced Number Guessing Game written in C, designed to be fun, interactive, and beginner-friendly.
+The computer generates a random number within a chosen range, and the player must guess it using hints and logic.
 
---------------------------
+📌 Features
 
-## 📌 Features
-- Random number generation between 1–100
-- User-friendly hints (Higher / Lower)
-- Tracks number of attempts
-- Option to play again
-- Written in clean, beginner-friendly C code
+🎲 Custom Range Selection → Choose your own minimum and maximum numbers
+
+⚡ Difficulty Levels → Easy (unlimited), Medium (10 attempts), Hard (5 attempts)
+
+💡 Hint System → Get helpful hints after every 3 wrong guesses (even/odd, close range)
+
+🔄 Replay Option → Play as many rounds as you want
+
+🏆 Best Score Tracker → Saves your fewest guesses in the current session
+
+🔥 Win Streak Counter → Track how many games you win in a row
+
+⏱️ Timer Mode → Shows time taken to guess the number
+
+🎨 Colored Output & Emojis → Better visuals with ANSI colors and fun icons
+
+✅ Input Validation → Handles invalid and out-of-range inputs smoothly
   
 --------------------------
 
@@ -27,19 +37,43 @@ After each guess, the program provides hints whether the guessed number is **hig
    
 --------------------------  
 
-📸 Example Gameplay
-Enter the number to play:
-50
-LOWER NUMBER PLEASE
-Enter the number to play:
-25
-HIGHER NUMBER PLEASE
-Enter the number to play:
-30
-Congooo !!
-You guessed the number in 3 guesses
+🎯 Gameplay
+
+Enter a number between your chosen range.
+
+The program tells you if the mystery number is higher 🔼 or lower 🔽.
+
+Keep guessing until you find the correct number 🎉.
+
+Try to set a new best score with fewer guesses and faster time!
 
 --------------------------
+
+Example Output
+===============================
+   🎮 WELCOME TO GUESS GAME 🎮
+===============================
+
+Choose range for the mystery number.
+Enter minimum: 1
+Enter maximum: 100
+
+Choose Difficulty:
+1. Easy (Unlimited attempts)
+2. Medium (10 attempts)
+3. Hard (5 attempts)
+Enter choice: 2
+
+Let's start! Try to guess the number between 1 and 100.
+Enter your guess: 50
+HIGHER NUMBER PLEASE 🔼
+...
+🎉 Congratulations! 🎉
+You guessed the number in 6 tries.
+🔥 Current Streak: 2 wins in a row!
+🏆 New Best Score! 🏆
+
+-------------------------
 
 🤝 Contributing"
 Feel free to fork this repository and submit pull requests.
