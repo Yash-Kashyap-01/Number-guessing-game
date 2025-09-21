@@ -19,8 +19,6 @@ The computer generates a random number within a chosen range, and the player mus
 
 ⏱️ Timer Mode → Shows time taken to guess the number
 
-🎨 Colored Output & Emojis → Better visuals with ANSI colors and fun icons
-
 ✅ Input Validation → Handles invalid and out-of-range inputs smoothly
   
 --------------------------
