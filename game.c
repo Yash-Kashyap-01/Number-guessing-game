@@ -2,12 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-// Function to clear input buffer
 void clearBuffer() {
     while (getchar() != '\n');
 }
 
-// Function to get a valid integer input
+
 int getIntInput(const char *prompt) {
     int value;
     while (1) {
@@ -19,7 +18,7 @@ int getIntInput(const char *prompt) {
     return value;
 }
 
-// Function to set attempts based on difficulty
+
 int getAttemptsByDifficulty(int difficulty) {
     switch (difficulty) {
         case 2: return 10; // Medium
@@ -39,13 +38,11 @@ int main() {
         int guessed_number, no_of_guesses = 0;
         int min_range, max_range, difficulty, max_attempts;
         int mystery_number;
-
-        // Game banner
+        
         printf("\n===============================\n");
         printf("       WELCOME TO GUESS GAME    \n");
         printf("===============================\n");
 
-        // Custom range
         min_range = getIntInput("\nEnter minimum range: ");
         max_range = getIntInput("Enter maximum range: ");
 
@@ -57,7 +54,6 @@ int main() {
 
         mystery_number = (rand() % (max_range - min_range + 1)) + min_range;
 
-        // Difficulty
         printf("\nChoose Difficulty:\n");
         printf("1. Easy (Unlimited attempts)\n");
         printf("2. Medium (10 attempts)\n");
@@ -68,7 +64,7 @@ int main() {
 
         printf("\nLet's start! Try to guess the number between %d and %d.\n", min_range, max_range);
 
-        time_t start_time = time(NULL); // Timer start
+        time_t start_time = time(NULL); 
 
         while (1) {
             guessed_number = getIntInput("\nEnter your guess: ");
@@ -85,7 +81,7 @@ int main() {
             } else if (guessed_number > mystery_number) {
                 printf("Lower number please.\n");
             } else {
-                // Correct guess
+            
                 time_t end_time = time(NULL);
                 int time_taken = (int)(end_time - start_time);
 
@@ -93,11 +89,9 @@ int main() {
                 printf("You guessed the number in %d tries.\n", no_of_guesses);
                 printf("Time Taken: %d seconds\n", time_taken);
 
-                // Streak handling
                 streak++;
                 printf("Current Streak: %d wins in a row!\n", streak);
 
-                // Best score handling
                 if (best_score == 0 || no_of_guesses < best_score) {
                     best_score = no_of_guesses;
                     printf("New Best Score!\n");
@@ -107,19 +101,17 @@ int main() {
                 break;
             }
 
-            // Hints after every 3 wrong tries
             if (no_of_guesses % 3 == 0) {
                 printf("Hint: The number is %s.\n", (mystery_number % 2 == 0) ? "EVEN" : "ODD");
                 printf("Hint: The number is between %d and %d.\n",
                        (mystery_number - 5 < min_range) ? min_range : mystery_number - 5,
                        (mystery_number + 5 > max_range) ? max_range : mystery_number + 5);
             }
-
-            // Out of attempts
+  
             if (no_of_guesses >= max_attempts) {
                 printf("\nGame Over! You've used all attempts.\n");
                 printf("The correct number was %d.\n", mystery_number);
-                streak = 0; // reset streak
+                streak = 0; 
                 break;
             }
         }
@@ -139,3 +131,4 @@ int main() {
 
     return 0;
 }
+
